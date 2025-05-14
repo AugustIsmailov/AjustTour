@@ -1,0 +1,29 @@
+name: chat-template
+
+entryPoint: main.sc
+
+botEngine: v2
+language: ru
+
+tests:
+    include:
+        - "*.xml"
+        - test.xml
+
+nlp:
+    intentNoMatchThresholds:
+        phrases: 0.2
+        patterns: 0.2
+
+injector:
+    catchAllLimit: 2
+
+# для внешней зависимости, require прописан в requirements.sc
+# dependencies:
+#   - name: offtopic
+#     type: git
+#     url: https://github.com/example/offtopic
+#     version: master
+#     # если репозиторий приватный
+#     loginSecretKey: GITHUB_LOGIN_SECRET
+#     tokenSecretKey: GITHUB_TOKEN_SECRET

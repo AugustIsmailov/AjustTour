@@ -1,0 +1,75 @@
+<test>
+    <test-case id="start test-case">
+        <q>/start</q>
+        <a state = "/Start">Привет!</a>
+    </test-case>
+
+    <test-case id="catchall test-case">
+        <state>Start</state>
+        <q>нераспознанная реплика</q>
+        <a state = "/CatchAll"/>
+    </test-case>
+
+    <!-- 
+    ИЛЛЮСТРАЦИЯ ЛОГИКИ СТЕЙТОВ В ШАБЛОНЕ
+    <test-case id="answer from intent">
+        <q>что ты умеешь</q>
+        <a state = "/Match">Я мог бы ответить на твои вопросы, но пока что я всего лишь шаблонный бот.</a>
+        <a state = "/AnotherQuestion">Я могу еще чем-то помочь?</a>
+        <q>нет</q>
+        <a state = "/Bye">Пока.</a>
+    </test-case>
+    -->
+
+    <!-- 
+    ПРИМЕРЫ ТЕГОВ ДЛЯ ВАШИХ ТЕСТ-КЕЙСОВ
+    <test-case id="demo test-case">
+    
+        <event>noMatch</event>
+
+        <dateTime>2016-06-07 13:23:55</dateTime>
+
+        <context var="client">
+            {
+                "name": "Arnie",
+                "account": {"username": "arnie2000"}
+            }
+        </context>
+
+        <mockData>
+            <query>https://httpbin.org/json</query>
+            <response status="200">
+                {
+                    "slideshow": {
+                        "title": "Sample Slide Show"
+                    }
+                }
+            </response>
+        </mockData>
+
+        <responseData field="replies[0].buttons">
+            [
+                {"text": "Button 1"},
+                {"text": "Button 2", "transition": "/1/handler2"}
+            ]
+        </responseData>
+
+        <responseData>{
+            "replies": [
+                {
+                    "type": "text",
+                    "text": "Checking the full object $response.data",
+                    "state": "/1"
+                }
+            ],
+            "answer": "Checking the full object $response.data" }
+        </responseData>
+
+        <responseData field="test.sessionResult">Результат сессии</responseData >
+
+        <timeout/>
+        <timeoutReply targetState="/timedout" interval="5"/>
+
+    </test-case>
+    -->
+</test>
